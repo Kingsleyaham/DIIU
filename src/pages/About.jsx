@@ -1,5 +1,5 @@
-import Qualifications from "../../components/portfolios/Qualifications";
-import WorkExperiences from "../../components/portfolios/WorkExperiences";
+import Qualifications from "../components/portfolios/Qualifications";
+import WorkExperiences from "../components/portfolios/WorkExperiences";
 
 const About = () => {
   return (

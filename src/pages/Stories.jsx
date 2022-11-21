@@ -1,20 +1,34 @@
 import React from "react";
-import stories from "../../data/stories";
-import { Slide } from "react-slideshow-image";
+import stories from "../data/stories";
+import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+
+const properties = {
+  prevArrow: (
+    <div className="py-2 px-4 rounded-full bg-slate-600 m-3 cursor-pointer w-fit h-fit">
+      <i className="fa-solid fa-angle-left"></i>
+    </div>
+  ),
+  nextArrow: (
+    <div className="py-2 px-4 rounded-full bg-slate-600 m-3 cursor-pointer w-fit h-fit">
+      <i className="fa-solid fa-angle-right"></i>
+    </div>
+  ),
+};
 
 const Stories = () => {
   return (
-    <div className="container mx-auto my-7 text-gray-50 sm:w-4/6">
+    <div className="container mx-auto my-7 text-gray-50 sm:w-4/6 p-2">
       <div className="header text-center pb-5">
         <h1 className="text-3xl font-medium">Students Stories</h1>
       </div>
-      <div className="flex justify-between my-12 items-center">
-        <div className="py-3 px-4 rounded-full bg-slate-600 m-3 flex item-center justify-center cursor-pointer arrow">
-          <i className="fa-solid fa-angle-left"></i>
-        </div>
-        {stories.map((story) => (
-          <div className="md:w-5/5 md:flex md:justify-between md:items-center">
+
+      <Fade onChange={function noRefCheck() {}} {...properties}>
+        {stories.map((story, index) => (
+          <div
+            className="md:flex md:justify-between md:items-center md:mx-10 my-12"
+            key={index}
+          >
             <div className="md:w-3/6">
               <div className="flex justify-center">
                 <img
@@ -37,11 +51,7 @@ const Stories = () => {
             </div>
           </div>
         ))}
-
-        <div className="py-3 px-4 rounded-full bg-slate-600 m-3 flex item-center justify-center cursor-pointer arrow">
-          <i className="fa-solid fa-angle-right"></i>
-        </div>
-      </div>
+      </Fade>
     </div>
   );
 };
