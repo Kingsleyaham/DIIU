@@ -1,36 +1,99 @@
 import React, { useState, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import Joi from "joi";
 import Navbar from "./components/layout/navbar";
-import Hero from "./components/section/Hero";
-import Contact from "./components/section/Contact";
-import NotFound from "./components/layout/notFound";
-import Stories from "./components/section/Stories";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Stories from "./pages/Stories";
+import About from "./pages/About";
 import "./App.css";
 
 function App() {
+  const [inputs, setInputs] = useState({ name: "", email: "", message: "" });
+  const [isSending, setIsSending] = useState(false);
+
   const checkActive = () => {
     const { pathname } = useLocation();
     if (pathname === "/contact") {
       return "contactPage";
     } else if (pathname === "/") {
       return "homePage";
-    } else if (pathname.includes("/about")) {
+    } else if (pathname === "/about") {
       return "about";
     } else if (pathname === "/stories") {
       return "stories";
     }
   };
 
+  const handleInput = (e, value) => {
+    // console.log(e.target.value)
+    if (value === "name") {
+      setInputs({ ...inputs, name: e.target.value });
+    } else if (value === "email") {
+      setInputs({ ...inputs, email: e.target.value });
+    }
+    if (value === "message") {
+      setInputs({ ...inputs, message: e.target.value });
+    }
+  };
+
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+    setIsSending(true);
+    const schema = Joi.object({
+      name: Joi.string().min(3).max(30).required(),
+      email: Joi.string().email({
+        minDomainSegments: 2,
+        tlds: { allow: false },
+      }),
+      message: Joi.string().min(10).required(),
+    });
+
+    const { error } = schema.validate(inputs);
+    if (error) {
+      toast.warn(error.message);
+      setIsSending(false);
+      return;
+    } else {
+      let templateParams = inputs;
+
+      try {
+        const res = await emailjs.send(
+          import.meta.env.VITE_serviveId,
+          import.meta.env.VITE_templateId,
+          templateParams,
+          import.meta.env.VITE_publicKey
+        );
+        setIsSending(false);
+        setInputs({ name: "", email: "", message: "" });
+        toast.success("Contacted Successfully!");
+      } catch (err) {
+        setIsSending(false);
+        toast.error("An error occured");
+      }
+    }
+  };
+
   return (
     <div className="App">
-      <Navbar checkActive={checkActive}/>
+      <ToastContainer />
+      <Navbar checkActive={checkActive} />
       <Routes>
-        <Route path="/" element={<Hero />} />
+        <Route path="/" element={<Home />} />
         <Route path="/stories" element={<Stories />} />
-        <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/" element={Hero} />
-        <Route path="/" element={Hero} /> */}
-        <Route path="*" element={<NotFound />} />
+        <Route
+          path="/contact"
+          element={
+            <Contact
+              handleFormSubmit={handleFormSubmit}
+              handleInput={handleInput}
+              inputs={inputs}
+              sending={isSending}
+            />
+          }
+        />
+        <Route path="/about" element={<About />} />
       </Routes>
     </div>
   );
