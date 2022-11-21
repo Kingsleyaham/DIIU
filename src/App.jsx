@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Navbar from "./components/layout/navbar";
-import Hero from "./components/section/Hero";
-import Contact from "./components/section/Contact";
-import NotFound from "./components/layout/notFound";
-import Stories from "./components/section/Stories";
 import "./App.css";
+import Routers from "./routers/Routers";
+import Footer from "./components/layout/footer";
 
 function App() {
   const checkActive = () => {
@@ -23,15 +20,9 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar checkActive={checkActive}/>
-      <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/stories" element={<Stories />} />
-        <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/" element={Hero} />
-        <Route path="/" element={Hero} /> */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Navbar checkActive={checkActive} />
+      <Routers />
+      <Footer />
     </div>
   );
 }

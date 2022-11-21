@@ -1,9 +1,9 @@
-const Hero = () => {
+const Home = () => {
   return (
     <div className="homepg">
       {/* <> */}
       <div className="upperSection">
-        <img src="/images/dr.iyke.jpg" alt="dr.iyke.jpg" />
+        <img src="/images/dr.iyke1.png" alt="dr.iyke.jpg" />
         <h1>
           Lorem Ipsum hiwe cfnwjc fnwjoc nwfoc nwc fnojw no djbdjk dbu dbui
           djkbd dbjd dbd jd dbjd dnjd kjojs s{" "}
@@ -25,4 +25,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;

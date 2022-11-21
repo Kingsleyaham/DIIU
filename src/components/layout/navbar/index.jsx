@@ -32,7 +32,7 @@ const Navbar = ({ checkActive }) => {
         </Link>
         <li>
           <div className="dropdown">
-            ABOUT ME {/* <span className="dropdown"> */}
+            ABOUT {/* <span className="dropdown"> */}
             <i className="fa-solid fa-caret-down"></i>
             <div className="dropdown-content">
               <a href="#">Link 1</a>
