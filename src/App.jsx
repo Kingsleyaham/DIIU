@@ -72,6 +72,7 @@ function App() {
       } catch (err) {
         setIsSending(false);
         toast.error("An error occured");
+        console.log(err, err.message);
       }
     }
   };
