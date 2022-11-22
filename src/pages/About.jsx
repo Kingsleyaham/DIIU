@@ -1,9 +1,9 @@
-import Qualifications from "../components/portfolios/Qualifications";
+import Qualifications from "../components/portfolios/qualifications";
 import WorkExperiences from "../components/portfolios/WorkExperiences";
 
 const About = () => {
   return (
-    <div className="container mx-auto bg-gray-100 m-3 rounded-sm shadow-md text-gray-900 mb-80">
+    <div className="container mx-auto bg-gray-100 m-3 rounded-sm shadow-md text-gray-900 mb-80 mt-20 pt-8">
       <div className="mx-auto pt-3 md:flex md:justify-between md:items-center p-5 mb-10">
         <div className="py-2 mx-auto md:w-3/6 flex justify-around">
           <img src="/images/dr.iyke2.png" alt="Dr Iyke Image" />

@@ -1,9 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Roboto:wght@400;500;700&display=swap");
-@import "react-slideshow-image/dist/styles.css";
-* {
-  border: 2px solid red;
-  box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&family=Pinyon+Script&family=Roboto:ital@0;1&display=swap");
 
 body {
   margin: 0;
@@ -20,36 +15,48 @@ body {
 
 .nav {
   width: 100%;
-  height: 15vh;
   user-select: none;
+  background-color: #2f3445;
+  z-index: 100;
+  box-shadow: 0px 1px 20px 0px rgb(1, 1, 1);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
 }
 
-.nav h3 {
-  font-family: "Pinyon Script", cursive;
-  color: white;
-  font-weight: 500;
-  margin: 0.5rem 0 0 2rem;
-  font-size: 2rem;
+.nav .mobile {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-animation: fadeNavIn 0.5s;
+  animation: fadeNavIn 0.5s;
+}
+
+@keyframes fadeNavIn {
+  from {
+    opacity: 0;
+    transform: translateY(-400px);
+  }
 }
 
 .nav ul {
-  background-color: inherit;
-  position: fixed;
-  /* top: -50px; */
-  top: 0;
-  width: 100%;
   display: flex;
-  gap: 2rem;
   justify-content: flex-end;
-  padding: 0.5rem;
-  padding-right: 3rem;
-  transition: top 1s;
+  gap: 2rem;
 }
 
-.nav ul.sticky {
-  background-color: #eee4e4;
-  top: -50;
-  box-shadow: 0px 1px 20px 0px rgb(1, 1, 1);
+.nav h3 {
+  font-family: "Fredoka One", cursive;
+  color: white;
+  font-weight: 500;
+  margin-right: auto;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .nav ul li {
@@ -57,7 +64,6 @@ body {
   cursor: pointer;
   font-size: 16px;
   font-weight: bolder;
-  border-radius: 5px;
   --h: 2.2em;
   line-height: var(--h);
   color: #0000;
@@ -67,83 +73,181 @@ body {
   transition: 0.3s;
 }
 
+.nav ul li a {
+  display: inline-block;
+  height: 100%;
+}
+
 .nav ul li.active {
+  border-radius: 0 0 5px 5px;
   border-bottom: 5px solid white;
-}
-
-.nav ul.sticky li {
-  border-radius: 5px;
-  text-shadow: 0 calc(-1 * var(--_t, 0em)) #382d2d,
-    0 calc(var(--h) - var(--_t, 0em)) #1095c1;
-}
-
-.nav ul.sticky li.active {
-  border-bottom: 5px solid blue;
 }
 
 .nav ul li:hover {
   --_t: var(--h);
 }
 
-.nav ul li .dropdown {
-  /* position: relative; */
+.nav i {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-/* .nav ul li span.dropdown:hover {
-    color: red;
-} */
-
-.nav ul li .dropdown .dropdown-content {
-  text-shadow: none;
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 38px;
-  /* right: 15px; */
-  width: 10%;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 10;
+.nav i:active {
+  color: red;
 }
 
-.nav ul li .dropdown:hover .dropdown-content {
-  display: flex;
-}
+@media only screen and (max-width: 600px) {
+  .nav ul {
+    display: none;
+  }
 
-.nav ul li .dropdown .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* .homepg {
+  .nav ul.mobile {
+    position: fixed;
     display: flex;
     flex-direction: column;
-} */
+    align-items: center;
+    justify-content: center;
+    background-color: #2f3445;
+  }
+}
 
 .homepg .upperSection {
   height: 100vh;
   background-color: #1c2438;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  /* justify-content: center; */
-  gap: 3rem;
-  flex-direction: column;
+  padding: 0 5rem;
+  margin-top: 3rem;
+  gap: 16rem;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scaleX(0), translateY(0) rotateX(10px);
+  }
 }
 
 .homepg .upperSection img {
-  width: 20rem;
-  height: 40%;
-  border-radius: 50%;
+  background-color: inherit;
+  width: 40rem;
+  height: 60%;
+  margin-bottom: 5rem;
 }
 
 .homepg .upperSection h1 {
   color: #fff;
+  font-size: 1.5rem;
+  max-width: 30rem;
+}
+
+.homepg .upperSection h1 span {
   font-size: 2rem;
-  width: 70%;
-  font-weight: 300;
+}
+
+.homepg .upperSection h1 button {
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+  user-select: none;
+  border: 2px solid #fff;
+  padding: 7px;
+  border-radius: 9px;
+}
+
+.homepg .upperSection h1 button:hover {
+  color: #1095c1;
+}
+
+.homepg .upperSection h1 button:active {
+  font-size: 21px;
+}
+
+@media only screen and (max-width: 1070px) {
+  .homepg .upperSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 13rem;
+  }
+
+  .homepg .upperSection h1 {
+    font-size: 1.5rem;
+    max-width: 30rem;
+    font-weight: 300;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .homepg .upperSection {
+    gap: 6rem;
+  }
+
+  .homepg .upperSection h1 {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 775px) {
+  .homepg .upperSection {
+    display: grid;
+    grid-template-rows: 0.2fr;
+    gap: 2rem;
+  }
+
+  .homepg .upperSection img {
+    margin-top: 5rem;
+    place-self: center;
+    width: 60%;
+    height: 60%;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .homepg .upperSection h1 {
+    margin-top: -8rem;
+    font-size: 19px;
+    grid-column: 1;
+    grid-row: 2;
+    place-self: center;
+  }
+}
+
+@media only screen and (max-width: 446px) {
+  .homepg .upperSection {
+    padding: 0 2rem;
+    background-color: #1c2438;
+    display: grid;
+    grid-template-columns: 5fr;
+    gap: 2rem;
+  }
+
+  .homepg .upperSection img {
+    place-self: center;
+    width: 70%;
+    height: 60%;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .homepg .upperSection h1 {
+    font-size: 15px;
+    grid-column: 1;
+    grid-row: 2;
+  }
 }
 
 .homepg .lowerSection {
@@ -155,23 +259,22 @@ body {
 }
 
 .homepg .lowerSection .card {
-  width: 50rem;
+  width: 50%;
   height: 30rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-  backdrop-filter: blur(12px) saturate(181%);
-  -webkit-backdrop-filter: blur(12px) saturate(181%);
   background-color: rgba(31, 77, 163, 0.07);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
 }
 
 .homepg .lowerSection .card h1 {
-  font-family: "Pinyon Script", cursive;
-  color: rgb(227, 99, 99);
+  font-family: "Montserrat", sans-serif;
+  color: black;
   font-weight: 500;
   font-size: 2rem;
 }
@@ -184,8 +287,172 @@ body {
   font-weight: bolder;
 }
 
-footer h3 {
-  font-family: "Pinyon Script";
+@media only screen and (max-width: 1000px) {
+  .homepg .lowerSection .card {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .homepg .lowerSection .card h1 {
+    font-size: 20px;
+  }
+
+  .homepg .lowerSection .card h3 {
+    font-size: 20px;
+  }
+}
+
+.contactMe {
+  background-position: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.contactMe h1 {
+  color: #fff;
+  font-weight: 500;
+  font-size: 2rem;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.contactMe .contactCard {
+  background-color: rgba(239, 241, 245, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.contactMe .contactCard form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.contactMe .contactCard form input {
+  width: 100%;
+  height: 3rem;
+  color: black;
+  font-weight: 800;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  margin: auto;
+}
+
+.contactMe .contactCard form textarea {
+  width: 100%;
+  height: 8rem;
+  color: black;
+  font-weight: 800;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: auto;
+}
+
+@media only screen and (max-width: 1110px) {
+  .contactMe .contactCard {
+    width: 70%;
+  }
+
+  .contactMe .contactCard form input {
+    width: 60%;
+  }
+
+  .contactMe .contactCard form textarea {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .contactMe .contactCard {
+    width: 80%;
+    gap: 1rem;
+  }
+
+  .contactMe .contactCard form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.contactMe .contactCard form button {
+  color: #fff;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: 6rem;
+  height: 2rem;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
+}
+
+.contactMe .contactCard form button:active {
+  box-shadow: inset 0px 8px 16px 0px rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width: 425px) {
+  .contactMe h1 {
+    font-size: 2rem;
+  }
+
+  .contactMe .contactCard p {
+    font-size: 1rem;
+  }
+
+  .contactMe .contactCard {
+    width: 90%;
+    height: 30rem;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .contactMe .contactCard form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contactMe .contactCard form input {
+    width: 100%;
+  }
+
+  .contactMe .contactCard form textarea {
+    width: 100%;
+  }
+
+  .contactMe .contactCard form button {
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+.contactMe .contactCard form button:hover {
+  background-color: rgb(91, 88, 88);
+}
+
+.contactMe .contactCard form button:disabled {
+  background-color: rgb(208, 199, 199);
+  cursor: not-allowed;
+}
+
+.contactMe .contactCard form button:disabled:hover {
+  background-color: rgb(208, 199, 199);
+}
+
+.contactMe .contactCard form input:focus,
+textarea:focus {
+  outline: none;
 }
 
 .stories_img {

@@ -1,58 +1,59 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 const Navbar = ({ checkActive }) => {
-  // const [stickyClass, setStickyClass] = useState({ top: "-50" });
-  const [stickyClass, setStickyClass] = useState(false);
+  const [showMobileNav, setShowMobileNav] = useState(false);
 
-  const handleScroll = () => {
-    // console.log(window.pageYOffset);
-    let windowHeight = window.pageYOffset;
-    if (windowHeight > 20) {
-      // setStickyClass({ top: 0 });
-      setStickyClass(true);
-    } else {
-      // setStickyClass({ top: -50 });
-      setStickyClass(false);
-    }
+  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
+
+  const showNavbar = () => {
+    setShowMobileNav(!showMobileNav);
   };
 
-  useEffect(() => {
-    window.removeEventListener("scroll", handleScroll);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const closeFromRouteClick = () => {
+    setShowMobileNav(false);
+  };
 
   return (
     <div className="nav">
-      <h3>Pacent</h3>
-      <ul className={stickyClass ? "sticky" : ""}>
-        <Link to="/">
-          <li className={checkActive() === "homePage" ? "active" : ""}>HOME</li>
-        </Link>
-        <li>
-          <div className="dropdown">
-            ABOUT {/* <span className="dropdown"> */}
-            <i className="fa-solid fa-caret-down"></i>
-            <div className="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
-            {/* </span> */}
-          </div>
+      <h3 className="brand-name">
+        <Link to="/">PA-CENT</Link>
+      </h3>
+      <ul className={isMobile && showMobileNav ? "mobile" : ""}>
+        <li
+          onClick={closeFromRouteClick}
+          className={checkActive() === "homePage" ? "active" : ""}
+        >
+          <Link to="/" className="link">
+            HOME
+          </Link>
         </li>
-        <Link to="/stories">
-          <li className={checkActive() === "stories" ? "active" : ""}>
-            STORIES
-          </li>
-        </Link>
-        <Link to="/contact">
-          <li className={checkActive() === "contactPage" ? "active" : ""}>
-            CONTACT
-          </li>
-        </Link>
+        <li
+          onClick={closeFromRouteClick}
+          className={checkActive() === "about" ? "active" : ""}
+        >
+          <Link to="/about">ABOUT ME</Link>
+        </li>
+        <li
+          onClick={closeFromRouteClick}
+          className={checkActive() === "stories" ? "active" : ""}
+        >
+          <Link to="/stories">STORIES</Link>
+        </li>
+        <li
+          onClick={closeFromRouteClick}
+          className={checkActive() === "contactPage" ? "active" : ""}
+        >
+          <Link to="/contact">CONTACT</Link>
+        </li>
+        {showMobileNav && isMobile && (
+          <i className="fa-solid fa-x " onClick={showNavbar}></i>
+        )}
       </ul>
+      {!showMobileNav && isMobile && (
+        <i className="fa-solid fa-bars" onClick={showNavbar}></i>
+      )}
     </div>
   );
 };

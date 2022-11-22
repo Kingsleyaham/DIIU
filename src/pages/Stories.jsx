@@ -18,7 +18,7 @@ const properties = {
 
 const Stories = () => {
   return (
-    <div className="container mx-auto my-7 text-gray-50 sm:w-4/6 p-2">
+    <div className="container mx-auto my-10 text-gray-50 sm:w-4/6 p-2 pt-28">
       <div className="header text-center pb-5">
         <h1 className="text-3xl font-medium">Students Stories</h1>
       </div>
