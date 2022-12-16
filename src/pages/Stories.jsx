@@ -33,7 +33,7 @@ const Stories = () => {
               <div className="flex justify-center">
                 <img
                   src={story.img}
-                  alt="student image"
+                  alt={story.name}
                   className="md:w-3/6 stories_img"
                 />
               </div>
