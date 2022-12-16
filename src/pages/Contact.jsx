@@ -13,19 +13,19 @@ const Contact = ({ handleInput, inputs, handleFormSubmit, sending }) => {
           <input
             type="text"
             placeholder="Name"
-            value={inputs.name}
+            value={inputs?.name}
             onChange={(e) => handleInput(e, "name")}
             required
           />
           <input
             type="email"
-            value={inputs.email}
+            value={inputs?.email}
             onChange={(e) => handleInput(e, "email")}
             placeholder="Your email address"
             required
           />
           <textarea
-            value={inputs.message}
+            value={inputs?.message}
             onChange={(e) => handleInput(e, "message")}
             placeholder="Message"
             required
