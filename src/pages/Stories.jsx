@@ -5,12 +5,18 @@ import "react-slideshow-image/dist/styles.css";
 
 const properties = {
   prevArrow: (
-    <div className="py-2 px-4 rounded-full bg-slate-600 m-3 cursor-pointer w-fit h-fit">
+    <div
+      title="previous"
+      className="py-2 px-4 rounded-full bg-slate-600 m-3 cursor-pointer w-fit h-fit"
+    >
       <i className="fa-solid fa-angle-left"></i>
     </div>
   ),
   nextArrow: (
-    <div className="py-2 px-4 rounded-full bg-slate-600 m-3 cursor-pointer w-fit h-fit">
+    <div
+      title="next"
+      className="py-2 px-4 rounded-full bg-slate-600 m-3 cursor-pointer w-fit h-fit"
+    >
       <i className="fa-solid fa-angle-right"></i>
     </div>
   ),

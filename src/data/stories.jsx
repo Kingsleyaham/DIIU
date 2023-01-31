@@ -24,7 +24,7 @@ const stories = [
     name: "Ezembaukwu O. Vivian",
     dept: "Statistics",
     story:
-      "He is a good lecturer. His teaching is usually lively and he teaches with real life examples.",
+    "I never knew learning could be this intriguing and fascinating. Dr. Umeh made it possible",
     img: "/images/vivian.jpg",
   },
 ];
