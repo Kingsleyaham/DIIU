@@ -4,6 +4,12 @@ const FooterNav = () => {
   return (
     <ul className="flex flex-wrap items-center text-sm text-gray-500 mt-3 dark:text-gray-400 justify-center">
       <li>
+        <Link to="/" className="mr-4 hover:underline px-3 ">
+          Home
+        </Link>
+      </li>
+
+      <li>
         <Link to="/about" className="mr-4 hover:underline px-3 ">
           About
         </Link>
@@ -19,11 +25,11 @@ const FooterNav = () => {
           Stories
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link to="#" className="mr-4 hover:underline px-3">
           Privacy Policy
         </Link>
-      </li>
+      </li> */}
     </ul>
   );
 };

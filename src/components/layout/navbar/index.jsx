@@ -18,7 +18,7 @@ const Navbar = ({ checkActive }) => {
   return (
     <div className="nav">
       <h3 className="brand-name">
-        <Link to="/">PA-CENT</Link>
+        <Link to="/">Dr. I.I. Umeh</Link>
       </h3>
       <ul className={isMobile && showMobileNav ? "mobile" : ""}>
         <li
