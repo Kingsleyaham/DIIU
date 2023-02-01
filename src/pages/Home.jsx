@@ -33,7 +33,7 @@ const Home = () => {
             </Link>
             {/* </Link> */}
           </h1>
-          <img src="/images/drIyke.PNG" alt="dr.iyke" loading="lazy" />
+          <img src="/images/drIyke.webp" alt="dr.iyke" loading="lazy" />
         </div>
         <div className="lowerSection">
           <div className="card">
