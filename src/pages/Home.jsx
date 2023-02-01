@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Dr I.I. Umeh </title>
+        <title>I.I. Umeh </title>
         <meta
           name="description"
           content="Dr. Iyke have been a lecturer in Nnamdi Azikiwe University since 2012. He is also the CEO/FOUNDER of PA-CENT Technologies, an ICT firm
@@ -27,11 +27,11 @@ const Home = () => {
             University of Nnamdi Azikiwe, Awka, Anambra
             <br />
             <br />
-            {/* <Link to="/about"> */}
+            <Link to="/about">
               <button>
                 ABOUT ME <i className="fa-solid fa-arrow-right"></i>
               </button>
-            {/* </Link> */}
+            </Link>
           </h1>
           <img src="/images/drIyke.PNG" alt="dr.iyke" loading="lazy" />
         </div>

@@ -27,7 +27,7 @@ const Stories = () => {
   return (
     <>
       <Helmet>
-        <title>Dr I.I. Umeh | Stories</title>
+        <title>I.I. Umeh | Stories</title>
         <meta name="description" content="These are the students' voices" />
         <meta name="keywords" content="about, studentstories, students, stories, lecturer, aboutme, unizik" />
       </Helmet>
