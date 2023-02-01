@@ -1,4 +1,4 @@
-import Qualifications from "../components/portfolios/Qualifications";
+import Qualifications from "../components/portfolios/qualifications";
 import WorkExperiences from "../components/portfolios/WorkExperiences";
 import { Helmet } from "react-helmet";
 
