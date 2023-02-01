@@ -1,6 +1,7 @@
 import { BsFacebook, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 import { FaResearchgate } from "react-icons/fa";
 import { SiGooglescholar } from "react-icons/si";
+
 const SocialLinks = () => {
   return (
     <ul className="flex flex-wrap items-center justify-center">

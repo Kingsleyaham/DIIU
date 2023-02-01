@@ -167,11 +167,11 @@ body {
 }
 
 .homepg .upperSection h1 button:hover {
-  color: #1095c1;
+  box-shadow: 0 0 40px #333;
 }
 
 .homepg .upperSection h1 button:active {
-  font-size: 21px;
+  box-shadow: inset 2px 2px 2px 2px black;
 }
 
 @media only screen and (max-width: 1070px) {
@@ -277,13 +277,14 @@ body {
   color: black;
   font-weight: 500;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .homepg .lowerSection .card h3 {
   color: Black;
   font-weight: 500;
   margin-left: auto;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bolder;
 }
 
