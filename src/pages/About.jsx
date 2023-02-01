@@ -1,4 +1,4 @@
-import Qualifications from "../components/portfolios/qualifications";
+import Qualifications from "../components/portfolios/Qualifications";
 import WorkExperiences from "../components/portfolios/WorkExperiences";
 
 const About = () => {
