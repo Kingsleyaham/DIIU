@@ -28,9 +28,9 @@ const Home = () => {
             <br />
             <br />
             {/* <Link to="/about"> */}
-              <button>
-                ABOUT ME <i className="fa-solid fa-arrow-right"></i>
-              </button>
+            <Link to="/about">
+              ABOUT ME <i className="fa-solid fa-arrow-right"></i>
+            </Link>
             {/* </Link> */}
           </h1>
           <img src="/images/drIyke.PNG" alt="dr.iyke" loading="lazy" />
