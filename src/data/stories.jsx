@@ -24,7 +24,7 @@ const stories = [
     name: "Ezembaukwu O. Vivian",
     dept: "Statistics",
     story:
-    "I never knew learning could be this intriguing and fascinating. Dr. Umeh made it possible",
+      "I never knew learning could be this intriguing and fascinating. Dr. Umeh made it possible",
     img: "/images/vivian.jpg",
   },
 ];
