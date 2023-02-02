@@ -5,16 +5,16 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Dr I.I. Umeh </title>
+        <title>I.I. Umeh </title>
         <meta
           name="description"
-          content="Dr. Iyke have been a lecturer in Nnamdi Azikiwe University since 2012. He is also the CEO/FOUNDER of PA-CENT Technologies, an ICT firm
+          content="Iyke have been a lecturer in Nnamdi Azikiwe University since 2012. He is also the CEO/FOUNDER of PA-CENT Technologies, an ICT firm
             domiciled in Nigeria."
         />
 
         <meta
           name="keywords"
-          content="portfolio, lecturer, unizik, teacher, pacent, dr. umeh, umeh, ikechukwu umeh, computer science, diiu, pacent-tech, Nnamdi-Azikiwe"
+          content="portfolio, lecturer, unizik, teacher, pacent, umeh, umeh, ikechukwu umeh, computer science, diiu, pacent-tech, Nnamdi-Azikiwe"
         />
       </Helmet>
 
@@ -45,7 +45,7 @@ const Home = () => {
               the processes like a flowchart &nbsp;
               <i className="fa-solid fa-quote-right"></i>
             </h1>
-            <h3>- Dr. I.I. Umeh</h3>
+            <h3>I.I. Umeh</h3>
           </div>
         </div>
       </div>

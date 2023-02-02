@@ -5,9 +5,15 @@ const Contact = ({ handleInput, inputs, handleFormSubmit, sending }) => {
   return (
     <>
       <Helmet>
-        <title>Dr I.I. Umeh | Contact</title>
-        <meta name="description" content="Get in touch with me and send me a message. I'd be happy to hear from you" />
-        <meta name="keywords" content="contact, diiu, pacent, unizik, lecturer" />
+        <title>I.I. Umeh | Contact</title>
+        <meta
+          name="description"
+          content="Get in touch with me and send me a message. I'd be happy to hear from you"
+        />
+        <meta
+          name="keywords"
+          content="contact, diiu, pacent, unizik, lecturer"
+        />
       </Helmet>
 
       <div className="contactMe md:mt-20 mt-10">
