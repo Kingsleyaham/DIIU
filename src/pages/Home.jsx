@@ -27,11 +27,11 @@ const Home = () => {
             University of Nnamdi Azikiwe, Awka, Anambra
             <br />
             <br />
-            {/* <Link to="/about"> */}
             <Link to="/about">
-              ABOUT ME <i className="fa-solid fa-arrow-right"></i>
+              <button>
+                ABOUT ME <i className="fa-solid fa-arrow-right"></i>
+              </button>
             </Link>
-            {/* </Link> */}
           </h1>
           <img src="/images/drIyke.webp" alt="dr.iyke" loading="lazy" />
         </div>
