@@ -159,7 +159,7 @@ body {
   font-size: 2rem;
 }
 
-.homepg .upperSection h1 button {
+.homepg .upperSection h1 a {
   font-size: 15px;
   color: white;
   cursor: pointer;
@@ -321,7 +321,6 @@ body {
     font-size: 15px;
   }
 }
-
 
 .contactMe {
   background-position: cover;

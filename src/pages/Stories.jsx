@@ -29,7 +29,10 @@ const Stories = () => {
       <Helmet>
         <title>I.I. Umeh | Stories</title>
         <meta name="description" content="These are the students' voices" />
-        <meta name="keywords" content="about, studentstories, students, stories, lecturer, aboutme, unizik" />
+        <meta
+          name="keywords"
+          content="about, studentstories, students, stories, lecturer, aboutme, unizik"
+        />
       </Helmet>
 
       <div className="container mx-auto my-10 text-gray-50 sm:w-4/6 p-2 pt-28">
