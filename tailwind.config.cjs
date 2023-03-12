@@ -15,7 +15,7 @@ module.exports = {
         contactButtonActive: 'inset 0px 8px 16px 0px rgba(0, 0, 0, 0.4)'
       },
       backgroundImage: {
-        eventsBanner: "url('/images/charles.jpg')"
+        eventsBanner: "url('/images/home-banner.svg')"
       }
     }
   },

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense, lazy } from "react";
+import React, { useState, Suspense, lazy } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import Joi from "joi";
@@ -10,6 +10,7 @@ import Navbar from "./components/layout/navbar";
 import Footer from "./components/layout/footer";
 import NotFound from "./pages/NotFound";
 import Loader from "./components/layout/loader";
+import ScrollToTop from "./components/scrollToTop";
 import "./App.css";
 
 const Home = lazy(() => import("./pages/Home"));
@@ -28,7 +29,7 @@ function App() {
     else if (pathname === "/") return "homePage";
     else if (pathname === "/about") return "about";
     else if (pathname === "/stories") return "stories";
-    else if (pathname === "/events") return "events";
+    else if (pathname.includes("events")) return "events";
   };
 
   const handleInput = (e, value) => {
@@ -69,12 +70,13 @@ function App() {
           templateParams,
           import.meta.env.VITE_publicKey
         );
+
         setIsSending(false);
         setInputs({ name: "", email: "", message: "" });
         toast.success("Contacted Successfully!");
       } catch (err) {
         setIsSending(false);
-        toast.error("An error occured");
+        toast.error("An error occured!");
       }
     }
   };
@@ -83,6 +85,7 @@ function App() {
     <div className="App">
       <ToastContainer />
       <Navbar checkActive={checkActive} />
+      <ScrollToTop />
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home />} />

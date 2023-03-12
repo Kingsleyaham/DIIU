@@ -67,7 +67,7 @@ const Contact = ({ handleInput, inputs, handleFormSubmit, sending }) => {
                rounded-lg active:shadow-contactButtonActive max-[425px]:w-full 
                hover:bg-contactButtonHover disabled:hover:bg-[contactButtonDisabledHover]
                disabled:bg-contactButtonDisabled disabled:cursor-not-allowed"
-              disabled
+              disabled={sending}
             >
               {sending && (
                 <RevolvingDot
