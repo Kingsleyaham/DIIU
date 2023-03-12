@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { BsXLg } from "react-icons/bs";
 
 const Navbar = ({ checkActive }) => {
   const [showMobileNav, setShowMobileNav] = useState(false);
@@ -37,6 +39,12 @@ const Navbar = ({ checkActive }) => {
         </li>
         <li
           onClick={closeFromRouteClick}
+          className={checkActive() === "events" ? "active" : ""}
+        >
+          <Link to="/events">EVENTS</Link>
+        </li>
+        <li
+          onClick={closeFromRouteClick}
           className={checkActive() === "stories" ? "active" : ""}
         >
           <Link to="/stories">STORIES</Link>
@@ -48,11 +56,11 @@ const Navbar = ({ checkActive }) => {
           <Link to="/contact">CONTACT</Link>
         </li>
         {showMobileNav && isMobile && (
-          <i className="fa-solid fa-x " onClick={showNavbar}></i>
+          <BsXLg color="white" onClick={showNavbar} />
         )}
       </ul>
       {!showMobileNav && isMobile && (
-        <i className="fa-solid fa-bars" onClick={showNavbar}></i>
+        <GiHamburgerMenu fontSize={25} color="white" onClick={showNavbar} />
       )}
     </div>
   );

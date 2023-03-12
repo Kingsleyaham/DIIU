@@ -16,6 +16,7 @@ const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Stories = lazy(() => import("./pages/Stories"));
+const Events = lazy(() => import("./pages/Events"));
 
 function App() {
   const [inputs, setInputs] = useState({ name: "", email: "", message: "" });
@@ -23,15 +24,11 @@ function App() {
 
   const checkActive = () => {
     const { pathname } = useLocation();
-    if (pathname === "/contact") {
-      return "contactPage";
-    } else if (pathname === "/") {
-      return "homePage";
-    } else if (pathname === "/about") {
-      return "about";
-    } else if (pathname === "/stories") {
-      return "stories";
-    }
+    if (pathname === "/contact") return "contactPage";
+    else if (pathname === "/") return "homePage";
+    else if (pathname === "/about") return "about";
+    else if (pathname === "/stories") return "stories";
+    else if (pathname === "/events") return "events";
   };
 
   const handleInput = (e, value) => {
@@ -101,6 +98,7 @@ function App() {
             }
           />
           <Route path="/about" element={<About />} />
+          <Route path="/events" element={<Events />} />
           <Route path="/stories" element={<Stories />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
