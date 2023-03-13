@@ -12,7 +12,8 @@ module.exports = {
       },
       boxShadow: {
         contactCard: '0px 8px 16px 0px rgba(0, 0, 0, 0.4)',
-        contactButtonActive: 'inset 0px 8px 16px 0px rgba(0, 0, 0, 0.4)'
+        contactButtonActive: 'inset 0px 8px 16px 0px rgba(0, 0, 0, 0.4)',
+        navbarShadow: '0px 1px 20px 0px rgb(1, 1, 1)'
       },
       backgroundImage: {
         eventsBanner: "url('/images/home-banner.svg')"

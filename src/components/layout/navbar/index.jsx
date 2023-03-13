@@ -7,7 +7,7 @@ import { BsXLg } from "react-icons/bs";
 const Navbar = ({ checkActive }) => {
   const [showMobileNav, setShowMobileNav] = useState(false);
 
-  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 645px)" });
 
   const showNavbar = () => {
     setShowMobileNav(!showMobileNav);
