@@ -2,26 +2,7 @@ import React from "react";
 import stories from "../data/stories";
 import { Fade } from "react-slideshow-image";
 import { Helmet } from "react-helmet";
-import "react-slideshow-image/dist/styles.css";
-
-const properties = {
-  prevArrow: (
-    <div
-      title="previous"
-      className="py-2 px-4 rounded-full bg-slate-600 m-3 cursor-pointer w-fit h-fit"
-    >
-      <i className="fa-solid fa-angle-left"></i>
-    </div>
-  ),
-  nextArrow: (
-    <div
-      title="next"
-      className="py-2 px-4 rounded-full bg-slate-600 m-3 cursor-pointer w-fit h-fit"
-    >
-      <i className="fa-solid fa-angle-right"></i>
-    </div>
-  ),
-};
+import properties from "../components/layout/sliderArrow";
 
 const Stories = () => {
   return (

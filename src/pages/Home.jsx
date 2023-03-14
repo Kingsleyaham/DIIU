@@ -1,5 +1,10 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { Slide } from "react-slideshow-image";
+import { pastEvents, upcomingEvents } from "../data/events";
+import properties from "../components/layout/sliderArrow";
+import { FaArrowRight } from "react-icons/fa";
+import Events from "../components/home/events";
 
 const Home = () => {
   return (
@@ -48,6 +53,7 @@ const Home = () => {
             <h3>I.I. Umeh</h3>
           </div>
         </div>
+        <Events />
       </div>
     </>
   );
