@@ -12,6 +12,8 @@ import NotFound from "./pages/NotFound";
 import Loader from "./components/layout/loader";
 import ScrollToTop from "./components/scrollToTop";
 import "./App.css";
+import EventDetails from "./pages/EventDetails";
+import Gallery from "./pages/Gallery";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -102,6 +104,8 @@ function App() {
           />
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/events/:eventDetail" element={<EventDetails />} />
+          <Route path="/gallery/" element={<Gallery />} />
           <Route path="/stories" element={<Stories />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
