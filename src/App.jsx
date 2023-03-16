@@ -104,7 +104,10 @@ function App() {
           />
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
-          <Route path="/events/:eventDetail" element={<EventDetails />} />
+          <Route
+            path="/events/:eventType/:eventIndex"
+            element={<EventDetails />}
+          />
           <Route path="/gallery/" element={<Gallery />} />
           <Route path="/stories" element={<Stories />} />
           <Route path="*" element={<NotFound />} />

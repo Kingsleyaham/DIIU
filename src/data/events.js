@@ -7,12 +7,12 @@ to know and understand a trending adage and phenomenon amongst them, which is th
 “Education is a scam” mentality. The motivation to curb this trend bore my initiative to begin a
 student career development programme which does not exist schools' academic curricula.`,
 
-    description: `<div><p>The maiden edition of the Life-After School Seminar Series was held on Thursday, 13th May 2021,
+    description: `<div><p className="py-1">The maiden edition of the Life-After School Seminar Series was held on Thursday, 13th May 2021,
 at the Liberation hall, formerly known as the Multipurpose Hall, Nnamdi Azikiwe University, Awka.</p>
-<.>The occasion witnessed the presence of experts in business start-up, self-made entrepreneurs,
+<p  className="py-1">The occasion witnessed the presence of experts in business start-up, self-made entrepreneurs,
 and motivational speakers from Nigeria and diaspora in a hybrid of physical and virtual
 presentations. It was a huge success with 98 participants in attendance.</p>
-<p>Soon after the event in that same year, many of the participants began to share very interesting testimonies, stating their
+<p  className="py-1">Soon after the event in that same year, many of the participants began to share very interesting testimonies, stating their
 experiences, and how the knowledge and the exposure gained from the seminar has been of
 immense help to them after their exit from the four walls of the university</p></div>`,
     image: "/gallery/img13.jpg",
@@ -34,11 +34,11 @@ to know and understand a trending adage and phenomenon amongst them, which is th
 “Education is a scam” mentality. The motivation to curb this trend bore my initiative to begin a
 student career development programme which does not exist schools' academic curricula.`,
 
-    description: `<div><p>The second edition of the series was held on the 4th of December, 2022 at CHISCO Hall, Nnamdi
+    description: `<div><p  className="py-1">The second edition of the series was held on the 4th of December, 2022 at CHISCO Hall, Nnamdi
 Azikiwe University Awka. Similarly, the event featured presentations from both local and foreign
 speakers.</p>
 <br />
-<p>The Vice Chancellor of Nnamdi Azikiwe University and some other dignitaries graced the
+<p  className="py-1">The Vice Chancellor of Nnamdi Azikiwe University and some other dignitaries graced the
 <span className="font-semibold text-sm">DR IKECHUKWU UMEH STUDENTS' CAREER DEVELOPMENT INITIATIVE (DIUSCADI)</span>
 occasion which had over 200 participants in attendance. The second edition was a huge success,
 and some of the participants are already sharing their testimonies.</p>

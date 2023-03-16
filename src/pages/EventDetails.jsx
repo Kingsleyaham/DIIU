@@ -7,13 +7,17 @@ import { events } from "../data/events";
 import parse from "html-react-parser";
 
 const EventDetails = () => {
-  const { eventDetail } = useParams();
+  const { eventType, eventIndex } = useParams();
   const [event, setEvent] = useState(() =>
-    events?.filter((event, index) => index === parseInt(eventDetail) - 1)
+    events?.filter(
+      (event, index) =>
+        event.type.toLowerCase() === eventType.toLowerCase() &&
+        index === parseInt(eventIndex) - 1
+    )
   );
 
   useEffect(() => {
-    console.log(eventDetail);
+    console.log(eventType, eventIndex);
   }, []);
   return (
     <div>
