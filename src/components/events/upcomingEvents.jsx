@@ -3,7 +3,10 @@ import { Slide } from "react-slideshow-image";
 import { BsCircleHalf } from "react-icons/bs";
 import { FaArrowRight } from "react-icons/fa";
 import properties from "../layout/sliderArrow";
-import { upcomingEvents } from "../../data/events";
+import { events } from "../../data/events";
+import { Link } from "react-router-dom";
+
+const upcomingEvents = events.filter((event) => event.type === "upcoming");
 
 function UpcomingEvents() {
   return (
@@ -22,23 +25,28 @@ function UpcomingEvents() {
           </h1>
         </div>
       ) : (
-        <div className="mx-auto text-gray-50 w-[80%] pt-7">
+        <div className="mx-auto text-gray-50 max-[700px]:w-full w-[80%] pt-7">
           <Slide {...properties}>
             {upcomingEvents.map((evt, index) => (
               <div
                 key={index}
                 style={{
-                  backgroundImage: `linear-gradient(rgba(81, 83, 87, 0.1), rgba(81, 83, 87, 0.7)), ${evt.imageUrl}`,
+                  backgroundImage: `linear-gradient(rgba(81, 83, 87, 0.1), rgba(81, 83, 87, 0.7)), url(${evt.image})`,
                   borderRadius: ".5rem",
                 }}
-                className="bg-[#000] bg-no-repeat bg-[length:100%_100%] bg-cover grid place-content-center w-full h-[80vh]"
+                className="bg-[#000] bg-no-repeat bg-[length:100%_100%] bg-cover grid place-content-center w-full max-[700px]:h-[60vh] h-[80vh]"
               >
                 <div className="p-5">
-                  <i className="text-3xl font-bold text-white"> {evt.title}</i>
+                  <i className="max-[400px]:text-lg text-3xl font-bold text-white">
+                    {" "}
+                    {evt.title}
+                  </i>
                   <p>{evt.date}</p>
-                  <h3 className="cursor-pointer flex items-center gap-3 justify-center text-2xl font-medium bg-contactCard hover:bg-black rounded-md transition duration-500 cursor mt-5">
-                    See details {<FaArrowRight />}
-                  </h3>
+                  <Link to={`/events/${evt.type}/${evt.id}`}>
+                    <h3 className="cursor-pointer flex items-center gap-3 justify-center max-[400px]:text-sm text-2xl font-medium bg-contactCard hover:bg-black rounded-md transition duration-500 cursor mt-5">
+                      See details {<FaArrowRight />}
+                    </h3>
+                  </Link>
                 </div>
               </div>
             ))}
