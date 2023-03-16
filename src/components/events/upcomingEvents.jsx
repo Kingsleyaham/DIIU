@@ -20,7 +20,7 @@ function UpcomingEvents() {
       {!upcomingEvents.length ? (
         <div className="bg-[#3F3F41] shadow-2xl rounded-lg mx-auto text-center py-12 mt-6">
           {/* <div className="rounded-xl w-3/6 mx-auto h-3/6 mt-6 bg-black text-center"> */}
-          <h1 className="text-3xl font-bold text-white sm:text-4xl">
+          <h1 className="max-[320px]:text-sm max-[400px]:text-2xl text-3xl font-bold text-white sm:text-4xl">
             No Upcoming Events
           </h1>
         </div>
