@@ -22,13 +22,14 @@ function UpcomingEvents() {
           </h1>
         </div>
       ) : (
-        <div className="mx-auto text-gray-50 w-full pt-7">
+        <div className="mx-auto text-gray-50 w-[80%] pt-7">
           <Slide {...properties}>
             {upcomingEvents.map((evt, index) => (
               <div
                 key={index}
                 style={{
                   backgroundImage: `linear-gradient(rgba(81, 83, 87, 0.1), rgba(81, 83, 87, 0.7)), ${evt.imageUrl}`,
+                  borderRadius: ".5rem",
                 }}
                 className="bg-[#000] bg-no-repeat bg-[length:100%_100%] bg-cover grid place-content-center w-full h-[80vh]"
               >

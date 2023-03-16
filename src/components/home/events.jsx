@@ -19,7 +19,7 @@ function Events() {
           Events
         </h1>
       </div>
-      <div className="mx-auto my-10 text-gray-50 w-full p-2 pt-28">
+      <div className="mx-auto my-10 text-gray-50 w-[80%] p-2 pt-28 rounded-lg">
         <Slide transitionDuration={800} {...properties} indicators={indicators}>
           {events.map((evt, index) => (
             <div
@@ -27,7 +27,7 @@ function Events() {
               style={{
                 backgroundImage: `linear-gradient(rgba(81, 83, 87, 0.1), rgba(81, 83, 87, 0.7)), ${evt.imageUrl}`,
               }}
-              className="bg-[#000] bg-no-repeat bg-[length:100%_100%] bg-cover grid place-content-center w-full h-[80vh]"
+              className=" rounded-lg bg-[#000] bg-no-repeat bg-[length:100%_100%] bg-cover grid place-content-center w-full h-[80vh]"
             >
               <div className="p-5">
                 <h3 className="text-4xl font-bold mb-7 underline">
@@ -35,7 +35,7 @@ function Events() {
                 </h3>
                 <i className="text-3xl font-bold text-white"> {evt.title}</i>
                 <p>{evt.date}</p>
-                <Link to='/events'>
+                <Link to="/events">
                   <h3 className="cursor-pointer flex items-center gap-3 justify-center text-2xl font-medium bg-contactCard hover:bg-black rounded-md transition duration-500 cursor mt-5">
                     See more events {<FaArrowRight />}
                   </h3>
