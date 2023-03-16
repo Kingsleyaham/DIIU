@@ -2,7 +2,7 @@ import React from "react";
 import { Slide } from "react-slideshow-image";
 import { BsCheck2Circle } from "react-icons/bs";
 import { FaArrowRight } from "react-icons/fa";
-import { pastEvents } from "../../data/events";
+import { events } from "../../data/events";
 import properties from "../layout/sliderArrow";
 
 function PastEvents() {
@@ -16,7 +16,7 @@ function PastEvents() {
       </h1>
       <div className="mx-auto text-gray-50 w-[80%] pt-7">
         <Slide {...properties}>
-          {pastEvents.map((evt, index) => (
+          {events.map((evt, index) => (
             <div
               key={index}
               style={{
