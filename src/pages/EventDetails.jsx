@@ -2,9 +2,10 @@ import React, { useEffect, useState, Suspense } from "react";
 import { BiCalendar } from "react-icons/bi";
 import { GiAlarmClock } from "react-icons/gi";
 import { HiOutlineLocationMarker } from "react-icons/hi";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { events } from "../data/events";
 import parse from "html-react-parser";
+import { FaArrowLeft } from "react-icons/fa";
 
 const EventDetails = () => {
   const { eventType, eventIndex } = useParams();
@@ -40,6 +41,17 @@ const EventDetails = () => {
               )}
             </div>
             <div className="mx-auto bg-gray-100 m-3 shadow-md text-gray-700 mt-12 p-5">
+              <Link to="/events">
+                <div
+                  className="block max-w-lg bg-white transition transition duration-300 cursor-pointer
+                hover:bg-[#2f3445] text-black hover:text-white p-3 shadow-lg lg:w-[10%] md:w-[20%] sm:w-[30%] rounded-full w-[40%] max-[300px]:w-[70%]"
+                >
+                  <h4 className="text-lg font-bold leading-tight text-center flex items-center justify-center gap-3">
+                    <FaArrowLeft className="max-[175px]:hidden" />{" "}
+                    <span>Back</span>
+                  </h4>
+                </div>
+              </Link>
               <div className="container mx-auto lg:w-3/6 md:w-4/6 sm:w-5/6 w-full pt-16 pb-28">
                 <div className="pb-5 pt-2">
                   <h1 className="text-xl font-extrabold md:text-2xl">
