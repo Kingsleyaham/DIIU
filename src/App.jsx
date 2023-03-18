@@ -3,10 +3,6 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import Joi from "joi";
 import Navbar from "./components/layout/navbar";
-// import Home from "./pages/Home";
-// import Contact from "./pages/Contact";
-// import Stories from "./pages/Stories";
-// import About from "./pages/About";
 import Footer from "./components/layout/footer";
 import NotFound from "./pages/NotFound";
 import Loader from "./components/layout/loader";
@@ -31,7 +27,8 @@ function App() {
     else if (pathname === "/") return "homePage";
     else if (pathname === "/about") return "about";
     else if (pathname === "/stories") return "stories";
-    else if (pathname.includes("events")) return "events";
+    else if (pathname === "/events") return "events";
+    else if (pathname === "/events/gallery") return "gallery";
   };
 
   const handleInput = (e, value) => {
@@ -105,10 +102,10 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
           <Route
-            path="/events/:eventType/:eventIndex"
+            path="/events/:eventType/:eventId"
             element={<EventDetails />}
           />
-          <Route path="/gallery/" element={<Gallery />} />
+          <Route path="/events/gallery" element={<Gallery />} />
           <Route path="/stories" element={<Stories />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -11,17 +11,14 @@ const Events = () => {
         <title>I.I. Umeh | Events</title>
         <meta name="description" content="Event Page" />
       </Helmet>
-      <div className="mt-16 text-white">
-        <div
-          className="contactMe min-h-[30vh] md:min-h-[40vh] bg-eventsBanner bg-no-repeat 
-                        bg-cover grid place-content-center relative"
-        >
-          <h1 className="text-center text-5xl md:text-7xl font-bold ">
+      <div className="mt-16 pt-12 bg-gray-50 text-gray-800">
+        <div className="contactMe relative">
+          <h1 className="font-extrabold text-3xl underline underline-offset-8 text-center">
             Events
           </h1>
         </div>
-        <PastEvents />
         <UpcomingEvents />
+        <PastEvents />
       </div>
     </>
   );

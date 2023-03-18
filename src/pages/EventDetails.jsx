@@ -8,18 +8,15 @@ import parse from "html-react-parser";
 import { FaArrowLeft } from "react-icons/fa";
 
 const EventDetails = () => {
-  const { eventType, eventIndex } = useParams();
+  const { eventType, eventId } = useParams();
   const [event, setEvent] = useState(() =>
     events?.filter(
-      (event, index) =>
+      (event) =>
         event.type.toLowerCase() === eventType.toLowerCase() &&
-        index === parseInt(eventIndex) - 1
+        event.id === parseInt(eventId)
     )
   );
 
-  useEffect(() => {
-    console.log(eventType, eventIndex);
-  }, []);
   return (
     <div>
       {event?.length ? (
@@ -43,11 +40,11 @@ const EventDetails = () => {
             <div className="mx-auto bg-gray-100 m-3 shadow-md text-gray-700 mt-12 p-5">
               <Link to="/events">
                 <div
-                  className="block max-w-lg bg-white transition transition duration-300 cursor-pointer
+                  className="block max-w-lg bg-white transition duration-300 cursor-pointer
                 hover:bg-[#2f3445] text-black hover:text-white p-3 shadow-lg lg:w-[10%] md:w-[20%] sm:w-[30%] rounded-full w-[40%] max-[300px]:w-[70%]"
                 >
                   <h4 className="text-lg font-bold leading-tight text-center flex items-center justify-center gap-3">
-                    <FaArrowLeft className="max-[175px]:hidden" />{" "}
+                    <FaArrowLeft className="max-[175px]:hidden" />
                     <span>Back</span>
                   </h4>
                 </div>
