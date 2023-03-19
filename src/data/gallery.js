@@ -1,0 +1,16 @@
+export const gallery = [
+  { img: "/images/gallery/img1.webp", alt: "img 1" },
+  { img: "/images/gallery/img2.webp", alt: "img 2" },
+  { img: "/images/gallery/img3.webp", alt: "img 3" },
+  { img: "/images/gallery/img4.webp", alt: "img 4" },
+  { img: "/images/gallery/img5.webp", alt: "img 5" },
+  { img: "/images/gallery/img6.jpg", alt: "img 6" },
+  { img: "/images/gallery/img7.jpg", alt: "img 7" },
+  { img: "/images/gallery/img8.jpg", alt: "img 8" },
+  { img: "/images/gallery/img9.jpg", alt: "img 9" },
+  { img: "/images/gallery/img10.jpg", alt: "img 10" },
+  { img: "/images/gallery/img11.jpg", alt: "img 11" },
+  { img: "/images/gallery/img12.webp", alt: "img 12" },
+  // { img: "/images/gallery/img13.png", alt: "img 13" },
+  // { img: "/images/gallery/img14.png", alt: "img 14" },
+];

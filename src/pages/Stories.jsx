@@ -2,26 +2,7 @@ import React from "react";
 import stories from "../data/stories";
 import { Fade } from "react-slideshow-image";
 import { Helmet } from "react-helmet";
-import "react-slideshow-image/dist/styles.css";
-
-const properties = {
-  prevArrow: (
-    <div
-      title="previous"
-      className="py-2 px-4 rounded-full bg-slate-600 m-3 cursor-pointer w-fit h-fit"
-    >
-      <i className="fa-solid fa-angle-left"></i>
-    </div>
-  ),
-  nextArrow: (
-    <div
-      title="next"
-      className="py-2 px-4 rounded-full bg-slate-600 m-3 cursor-pointer w-fit h-fit"
-    >
-      <i className="fa-solid fa-angle-right"></i>
-    </div>
-  ),
-};
+import { storiesArrows } from "../components/layout/sliderProps";
 
 const Stories = () => {
   return (
@@ -40,7 +21,7 @@ const Stories = () => {
           <h1 className="text-3xl font-medium">Students Stories</h1>
         </div>
 
-        <Fade onChange={function noRefCheck() {}} {...properties}>
+        <Fade onChange={function noRefCheck() {}} {...storiesArrows}>
           {stories.map((story, index) => (
             <div
               className="md:flex md:justify-between md:items-center md:mx-10 my-12"
