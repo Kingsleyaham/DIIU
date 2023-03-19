@@ -81,14 +81,39 @@ const EventDetails = () => {
                   </div>
                 )}
 
-                <div>
-                  <div className="host pt-6">
+                <div className="px-2">
+                  {evt.speakers.length > 0 && (
+                    <div className="speakers pt-12">
+                      <h2 className="text-xl font-extrabold md:text-xl pb-3">
+                        Guest Speakers
+                      </h2>
+                      <div className="sm:grid md:grid-cols-4 gap-8 sm:gap-6 sm:grid-cols-2 grid-cols-1">
+                        {evt.speakers.map((speaker, index) => (
+                          <div className="pt-8 sm:w-full w-[60%] mx-auto">
+                            <figure>
+                              <img src={speaker.img} alt="host image" />
+                              <figcaption className="mt-2 text-sm text-center text-gray-600 font-semibold">
+                                <span className="block">{speaker.name}</span>
+                                <span className="block">{speaker.about}</span>
+                              </figcaption>
+                            </figure>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="host pt-16 px-2">
                     <h2 className="text-xl font-extrabold md:text-xl pb-5">
                       Host
                     </h2>
                     <div className="pt-5">
-                      <figure className="sm:w-2/6 w-3/6">
-                        <img src={evt.host.img} alt="host image" />
+                      <figure className="md:w-[30%] w-3/6 sm:w-2/6">
+                        <img
+                          src={evt.host.img}
+                          alt="host image"
+                          className="rounded-3xl"
+                        />
                         <figcaption className="mt-2 text-sm text-center text-gray-600 font-semibold">
                           {evt.host.name}
                           <br />

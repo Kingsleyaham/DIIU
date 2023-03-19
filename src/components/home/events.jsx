@@ -4,46 +4,43 @@ import { Slide } from "react-slideshow-image";
 import { events } from "../../data/events";
 import parse from "html-react-parser";
 import { slideArrows } from "../layout/sliderProps";
+import { titleCase } from "../../utils/titleCase";
 
 function Events() {
   const indicators = (index) => <div className="indicator">.</div>;
 
   return (
-    <div className="h-auto text-gray-800 bg-gray-50 py-5">
-      <div className="min-h-[10vh] md:min-h-[10vh] bg-cover grid place-content-center relative">
+    <div className="h-auto text-gray-800 bg-gray-50 py-5 pb-20 pt-10">
+      <div className="min-h-[6vh] grid place-content-center">
         <h1 className="flex text-center md:text-3xl font-bold underline px-8 text-2xl">
           Events
         </h1>
       </div>
-      <div className="mx-auto my-6 text-gray-50 max-[700px]:w-full w-[70%] p-2 pt-10 rounded-lg">
-        <Slide
-          transitionDuration={800}
-          {...slideArrows}
-          indicators={indicators}
-        >
+      <div className="mx-auto my-6 text-gray-50 max-[700px]:w-full w-[70%] p-2 pt-10 rounded-lg px-8">
+        <Slide transitionDuration={800} {...slideArrows}>
           {events.map((evt, index) => (
             <div
-              className="bg-white border border-gray-200 rounded-lg shadow-xl shadow-slate-200 m-5"
+              className="bg-white border border-gray-200 rounded-lg shadow-lg shadow-slate-200 m-5"
               key={index}
             >
               <Link to={`/events/${evt.type}/${evt.id}`}>
                 <img className="rounded-t-lg" src={evt.image} alt="" />
               </Link>
               <div className="p-5">
-                <div className="md:flex justify-between items-center">
+                <div className="flex md:justify-between justify-start md:items-baseline flex-col md:flex-row mb-2 ">
                   <Link to={`/events/${evt.type}/${evt.id}`}>
-                    <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900">
+                    <h5 className="text-xl font-bold tracking-tight text-gray-900 m">
                       {evt.title}
                     </h5>
                   </Link>
 
-                  <div className="block bg-white py-3 rounded-full">
+                  <div className="block bg-white rounded-full order-first md:order-last pb-2 md:pb-0">
                     <h5
                       className={`text-lg font-bold leading-tight ${
                         evt.type === "past" ? "text-red-500" : "text-green-500"
                       } `}
                     >
-                      {evt.type}
+                      {titleCase(evt.type)}
                     </h5>
                   </div>
                 </div>

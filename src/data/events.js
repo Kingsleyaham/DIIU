@@ -16,7 +16,7 @@ presentations. It was a huge success with 98 participants in attendance.</p>
 <p  className="py-1">Soon after the event in that same year, many of the participants began to share very interesting testimonies, stating their
 experiences, and how the knowledge and the exposure gained from the seminar has been of
 immense help to them after their exit from the four walls of the university</p></div>`,
-    image: "/gallery/img1.jpg",
+    image: "/images/gallery/event1.jpg",
     date: "13th May, 2021",
     time: "10:00 am prompt",
     venue: "Liberation Hall NAU Awka",
@@ -25,6 +25,7 @@ immense help to them after their exit from the four walls of the university</p><
       about: "Senior Lecturer Nnamdi Azikiwe University",
       img: "/images/dr.iyke2.webp",
     },
+    speakers: [],
   },
 
   {
@@ -46,7 +47,7 @@ occasion which had over 200 participants in attendance. The second edition was a
 and some of the participants are already sharing their testimonies.</p>
 </div>`,
 
-    image: "/gallery/img2.jpg",
+    image: "/images/gallery/event2.jpg",
     date: "4th December, 2022",
     time: "10:00 am prompt",
     venue: "Chisco Hall Nnamdi Azikiwe University Awka",
@@ -55,6 +56,7 @@ and some of the participants are already sharing their testimonies.</p>
       about: "Senior Lecturer Nnamdi Azikiwe University",
       img: "/images/dr.iyke2.webp",
     },
+    speakers: [],
   },
 
   {
@@ -77,7 +79,7 @@ and Chukwuemeka Odumegwu Ojukwu University.</p>
 <p>Participation in the seminar is totally Cost free for interested participants (final year students)</p>
 `,
 
-    image: "/gallery/img3.jpg",
+    image: "/images/gallery/event3.webp",
     date: "20th April, 2022",
     time: "10:00 am prompt",
     venue: "ASUU Multipurpose Hall, Nnamdi Azikiwe University, Awka",
@@ -86,5 +88,22 @@ and Chukwuemeka Odumegwu Ojukwu University.</p>
       about: "Senior Lecturer Nnamdi Azikiwe University",
       img: "/images/dr.iyke2.webp",
     },
+    speakers: [
+      {
+        name: "Mr Chukwuemeka Fred Agbata CFA",
+        about: "MD Anambra State ICT Agency",
+        img: "/images/speakers/speaker1.webp",
+      },
+      {
+        name: "",
+        about: "Hon Commissioner Youth Emmpowerment",
+        img: "/images/speakers/speaker2.webp",
+      },
+      {
+        name: "Dr Gbenga Shodare",
+        about: "Sheffield University UK",
+        img: "/images/speakers/speaker3.webp",
+      },
+    ],
   },
 ];

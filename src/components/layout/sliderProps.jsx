@@ -28,7 +28,7 @@ export const slideArrows = {
   prevArrow: (
     <div
       title="previous"
-      className="p-4 max-[500px]:hidden rounded-full bg-transparent shadow-sm cursor-pointer w-fit h-fit md:-m-14 -m-8"
+      className="p-4 max-[600px]:hidden rounded-full bg-transparent shadow-sm cursor-pointer w-fit h-fit md:-m-14 -m-8"
     >
       {/* <i className="fa-solid fa-angle-left"></i> */}
       <FaArrowAltCircleLeft className="text-2xl shadow-lg shadow-gray-200 text-slate-700" />
@@ -38,7 +38,7 @@ export const slideArrows = {
   nextArrow: (
     <div
       title="next"
-      className="p-4 max-[500px]:hidden rounded-full shadow-sm bg-transparent cursor-pointer w-fit h-fit md:-m-14 -m-8"
+      className="p-4 max-[600px]:hidden rounded-full shadow-sm bg-transparent cursor-pointer w-fit h-fit md:-m-14 -m-8"
     >
       {/* <i className="fa-solid fa-angle-right"></i> */}
       <FaArrowAltCircleRight className="text-2xl shadow-lg shadow-gray-200 text-slate-700" />
