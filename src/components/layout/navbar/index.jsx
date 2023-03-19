@@ -28,32 +28,38 @@ const Navbar = ({ checkActive }) => {
           className={checkActive() === "homePage" ? "active" : ""}
         >
           <Link to="/" className="link">
-            HOME
+            Home
           </Link>
         </li>
         <li
           onClick={closeFromRouteClick}
           className={checkActive() === "about" ? "active" : ""}
         >
-          <Link to="/about">ABOUT ME</Link>
-        </li>
-        <li
-          onClick={closeFromRouteClick}
-          className={checkActive() === "events" ? "active" : ""}
-        >
-          <Link to="/events">EVENTS</Link>
+          <Link to="/about">About</Link>
         </li>
         <li
           onClick={closeFromRouteClick}
           className={checkActive() === "stories" ? "active" : ""}
         >
-          <Link to="/stories">STORIES</Link>
+          <Link to="/stories">Stories</Link>
         </li>
         <li
           onClick={closeFromRouteClick}
           className={checkActive() === "contactPage" ? "active" : ""}
         >
-          <Link to="/contact">CONTACT</Link>
+          <Link to="/contact">Contact</Link>
+        </li>
+        <li
+          onClick={closeFromRouteClick}
+          className={checkActive() === "events" ? "active" : ""}
+        >
+          <Link to="/events">Events</Link>
+        </li>
+        <li
+          onClick={closeFromRouteClick}
+          className={checkActive() === "gallery" ? "active" : ""}
+        >
+          <Link to="/events/gallery">Gallery</Link>
         </li>
         {showMobileNav && isMobile && (
           <BsXLg color="white" onClick={showNavbar} />

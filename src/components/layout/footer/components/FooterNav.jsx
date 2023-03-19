@@ -8,13 +8,11 @@ const FooterNav = () => {
           Home
         </Link>
       </li>
-
       <li>
         <Link to="/about" className="mr-4 hover:underline px-3 ">
           About
         </Link>
       </li>
-
       <li>
         <Link to="/contact" className="hover:underline px-3">
           Contact
@@ -24,12 +22,17 @@ const FooterNav = () => {
         <Link to="/stories" className="hover:underline px-3">
           Stories
         </Link>
-      </li>
-      {/* <li>
-        <Link to="#" className="mr-4 hover:underline px-3">
-          Privacy Policy
+      </li>{" "}
+      <li>
+        <Link to="/events" className="hover:underline px-3">
+          Events
         </Link>
-      </li> */}
+      </li>{" "}
+      <li>
+        <Link to="/events/gallery" className="hover:underline px-3">
+          Gallery
+        </Link>
+      </li>
     </ul>
   );
 };

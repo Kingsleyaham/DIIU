@@ -8,18 +8,15 @@ import parse from "html-react-parser";
 import { FaArrowLeft } from "react-icons/fa";
 
 const EventDetails = () => {
-  const { eventType, eventIndex } = useParams();
+  const { eventType, eventId } = useParams();
   const [event, setEvent] = useState(() =>
     events?.filter(
-      (event, index) =>
+      (event) =>
         event.type.toLowerCase() === eventType.toLowerCase() &&
-        index === parseInt(eventIndex) - 1
+        event.id === parseInt(eventId)
     )
   );
 
-  useEffect(() => {
-    console.log(eventType, eventIndex);
-  }, []);
   return (
     <div>
       {event?.length ? (
@@ -43,11 +40,11 @@ const EventDetails = () => {
             <div className="mx-auto bg-gray-100 m-3 shadow-md text-gray-700 mt-12 p-5">
               <Link to="/events">
                 <div
-                  className="block max-w-lg bg-white transition transition duration-300 cursor-pointer
+                  className="block max-w-lg bg-white transition duration-300 cursor-pointer
                 hover:bg-[#2f3445] text-black hover:text-white p-3 shadow-lg lg:w-[10%] md:w-[20%] sm:w-[30%] rounded-full w-[40%] max-[300px]:w-[70%]"
                 >
                   <h4 className="text-lg font-bold leading-tight text-center flex items-center justify-center gap-3">
-                    <FaArrowLeft className="max-[175px]:hidden" />{" "}
+                    <FaArrowLeft className="max-[175px]:hidden" />
                     <span>Back</span>
                   </h4>
                 </div>
@@ -84,14 +81,39 @@ const EventDetails = () => {
                   </div>
                 )}
 
-                <div>
-                  <div className="host pt-6">
+                <div className="px-2">
+                  {evt.speakers.length > 0 && (
+                    <div className="speakers pt-12">
+                      <h2 className="text-xl font-extrabold md:text-xl pb-3">
+                        Guest Speakers
+                      </h2>
+                      <div className="sm:grid md:grid-cols-4 gap-8 sm:gap-6 sm:grid-cols-2 grid-cols-1">
+                        {evt.speakers.map((speaker, index) => (
+                          <div className="pt-8 sm:w-full w-[60%] mx-auto">
+                            <figure>
+                              <img src={speaker.img} alt="host image" />
+                              <figcaption className="mt-2 text-sm text-center text-gray-600 font-semibold">
+                                <span className="block">{speaker.name}</span>
+                                <span className="block">{speaker.about}</span>
+                              </figcaption>
+                            </figure>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="host pt-16 px-2">
                     <h2 className="text-xl font-extrabold md:text-xl pb-5">
                       Host
                     </h2>
                     <div className="pt-5">
-                      <figure className="sm:w-2/6 w-3/6">
-                        <img src={evt.host.img} alt="host image" />
+                      <figure className="md:w-[30%] w-3/6 sm:w-2/6">
+                        <img
+                          src={evt.host.img}
+                          alt="host image"
+                          className="rounded-3xl"
+                        />
                         <figcaption className="mt-2 text-sm text-center text-gray-600 font-semibold">
                           {evt.host.name}
                           <br />

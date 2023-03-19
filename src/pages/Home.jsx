@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import Events from "../components/home/events";
+import Events from "../components/home/Events";
 
 const Home = () => {
   return (
@@ -41,9 +41,8 @@ const Home = () => {
             <h1>
               <i className="fa-solid fa-quote-left"></i>
               &nbsp; Life is like a computer, full of programs and processes and
-              <br />
-              algorithms. Learn to live it by flowing through <br />
-              the processes like a flowchart &nbsp;
+              algorithms. Learn to live it by flowing through the processes like
+              a flowchart &nbsp;
               <i className="fa-solid fa-quote-right"></i>
             </h1>
             <h3>I.I. Umeh</h3>
