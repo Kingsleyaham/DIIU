@@ -41,9 +41,12 @@ function UpcomingEvents() {
               className="bg-white border border-gray-200 rounded-lg shadow-xl shadow-slate-200 m-5"
               key={index}
             >
-              <Link to={`/events/${evt.type}/${evt.id}`}>
-                <img className="rounded-t-lg" src={evt.image} alt="" />
-              </Link>
+              <div className="flex justify-center bg-black">
+                <Link to={`/events/${evt.type}/${evt.id}`}>
+                  <img className="rounded-t-lg" src={evt.image} alt="" />
+                </Link>
+              </div>
+
               <div className="p-5">
                 <Link to={`/events/${evt.type}/${evt.id}`}>
                   <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-900">
