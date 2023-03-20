@@ -68,8 +68,10 @@ to know and understand a trending adage and phenomenon amongst them, which is th
 “Education is a scam” mentality. The motivation to curb this trend bore my initiative to begin a
 student career development programme which does not exist schools' academic curricula.`,
 
-    description: `<p>I most humbly, and specially invite you to participate and partner in the forthcoming third edition
-of the <span className="italic font-semibold">"Life-After School Seminar Series."</span></p>
+    description: `<p>I most respectfully, invite you to the third edition
+of the <span className="italic font-semibold">"Life-After School Seminar Series" (LASDCSS3).</span>
+The organizers of this event, and the participants solicit for your esteemed presence during this event. We know that sharing some moments of your vast experience and advice will go a long way to motivate these young ones, and put them in the right direction towards building a good career for the betterment of the future of our society
+</p>
 <br />
 <h5 className="font-bold text-lg leading-10">Programmes for the event</h5>
 <p>Who can participate: Final year students of Science discipline in Nnamdi Azikiwe University Awka
