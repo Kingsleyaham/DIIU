@@ -23,9 +23,12 @@ function Events() {
               className="bg-white border border-gray-200 rounded-lg shadow-lg shadow-slate-200 m-5"
               key={index}
             >
-              <Link to={`/events/${evt.type}/${evt.id}`}>
-                <img className="rounded-t-lg" src={evt.image} alt="" />
-              </Link>
+              <div className="flex justify-center bg-black">
+                <Link to={`/events/${evt.type}/${evt.id}`}>
+                  <img className="rounded-t-lg" src={evt.image} alt="" />
+                </Link>
+              </div>
+
               <div className="p-5">
                 <div className="flex md:justify-between justify-start md:items-baseline flex-col md:flex-row mb-2 ">
                   <Link to={`/events/${evt.type}/${evt.id}`}>

@@ -47,7 +47,7 @@ occasion which had over 200 participants in attendance. The second edition was a
 and some of the participants are already sharing their testimonies.</p>
 </div>`,
 
-    image: "/images/gallery/event2.jpg",
+    image: "/images/gallery/event2.webp",
     date: "4th December, 2022",
     time: "10:00 am prompt",
     venue: "Chisco Hall Nnamdi Azikiwe University Awka",
@@ -81,7 +81,7 @@ and Chukwuemeka Odumegwu Ojukwu University.</p>
 <p>Participation in the seminar is totally Cost free for interested participants (final year students)</p>
 `,
 
-    image: "/images/gallery/event3.webp",
+    image: "/images/logo.jpg",
     date: "20th April, 2022",
     time: "10:00 am prompt",
     venue: "ASUU Multipurpose Hall, Nnamdi Azikiwe University, Awka",
@@ -92,18 +92,18 @@ and Chukwuemeka Odumegwu Ojukwu University.</p>
     },
     speakers: [
       {
-        name: "Mr Chukwuemeka Fred Agbata CFA",
-        about: "MD Anambra State ICT Agency",
-        img: "/images/speakers/speaker1.webp",
-      },
-      {
         name: "",
         about: "Hon Commissioner Youth Emmpowerment",
-        img: "/images/speakers/speaker2.webp",
+        img: "/images/speakers/speaker1.webp",
       },
       {
         name: "Dr Gbenga Shodare",
         about: "Sheffield University UK",
+        img: "/images/speakers/speaker2.webp",
+      },
+      {
+        name: "Mr Chukwuemeka Fred Agbata CFA",
+        about: "MD Anambra State ICT Agency",
         img: "/images/speakers/speaker3.webp",
       },
     ],
