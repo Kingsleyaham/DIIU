@@ -45,12 +45,6 @@ const Navbar = ({ checkActive }) => {
         </li>
         <li
           onClick={closeFromRouteClick}
-          className={checkActive() === "contactPage" ? "active" : ""}
-        >
-          <Link to="/contact">Contact</Link>
-        </li>
-        <li
-          onClick={closeFromRouteClick}
           className={checkActive() === "events" ? "active" : ""}
         >
           <Link to="/events">Events</Link>
@@ -61,6 +55,13 @@ const Navbar = ({ checkActive }) => {
         >
           <Link to="/events/gallery">Gallery</Link>
         </li>
+        <li
+          onClick={closeFromRouteClick}
+          className={checkActive() === "contactPage" ? "active" : ""}
+        >
+          <Link to="/contact">Contact</Link>
+        </li>
+
         {showMobileNav && isMobile && (
           <BsXLg color="white" onClick={showNavbar} />
         )}
