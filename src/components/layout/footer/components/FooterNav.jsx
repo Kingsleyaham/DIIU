@@ -14,11 +14,6 @@ const FooterNav = () => {
         </Link>
       </li>
       <li>
-        <Link to="/contact" className="hover:underline px-3">
-          Contact
-        </Link>
-      </li>
-      <li>
         <Link to="/stories" className="hover:underline px-3">
           Stories
         </Link>
@@ -31,6 +26,11 @@ const FooterNav = () => {
       <li>
         <Link to="/events/gallery" className="hover:underline px-3">
           Gallery
+        </Link>
+      </li>
+      <li>
+        <Link to="/contact" className="hover:underline px-3">
+          Contact
         </Link>
       </li>
     </ul>

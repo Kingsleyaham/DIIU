@@ -87,14 +87,18 @@ const EventDetails = () => {
                       <h2 className="text-xl font-extrabold md:text-xl pb-3">
                         Guest Speakers
                       </h2>
-                      <div className="sm:grid md:grid-cols-4 gap-8 sm:gap-6 sm:grid-cols-2 grid-cols-1">
+                      <div className="sm:grid md:grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-2 grid-cols-1">
                         {evt.speakers.map((speaker, index) => (
-                          <div className="pt-8 sm:w-full w-[60%] mx-auto">
+                          <div key={index} className="pt-8 sm:w-full w-[60%] mx-auto">
                             <figure>
-                              <img src={speaker.img} alt="host image" />
+                              <img
+                                src={speaker.img}
+                                alt="host image"
+                                className="rounded-full"
+                              />
                               <figcaption className="mt-2 text-sm text-center text-gray-600 font-semibold">
-                                <span className="block">{speaker.name}</span>
-                                <span className="block">{speaker.about}</span>
+                                <span className="block text-xl">{speaker.name}</span>
+                                <i className="block">{speaker.about}</i>
                               </figcaption>
                             </figure>
                           </div>
