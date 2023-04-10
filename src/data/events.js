@@ -1,8 +1,8 @@
 export const events = [
   {
     id: 1,
-    type: 'past',
-    title: 'The Maiden Edition - Life-After School Seminar Series',
+    type: "past",
+    title: "The Maiden Edition - Life-After School Seminar Series",
     summary: `My encounter with many fresh graduates from some Nigerian universities gave me the privilege
 to know and understand a trending adage and phenomenon amongst them, which is the
 “Education is a scam” mentality. The motivation to curb this trend bore my initiative to begin a
@@ -16,22 +16,22 @@ presentations. It was a huge success with 98 participants in attendance.</p>
 <p  className="py-1">Soon after the event in that same year, many of the participants began to share very interesting testimonies, stating their
 experiences, and how the knowledge and the exposure gained from the seminar has been of
 immense help to them after their exit from the four walls of the university</p></div>`,
-    image: '/images/gallery/event1.jpg',
-    date: '13th May, 2021',
-    time: '10:00 am prompt',
-    venue: 'Liberation Hall NAU Awka',
+    image: "/images/gallery/event1.jpg",
+    date: "13th May, 2021",
+    time: "10:00 am prompt",
+    venue: "Liberation Hall NAU Awka",
     host: {
-      name: 'Dr. Ikechukwu Innocent Umeh',
-      about: 'Senior Lecturer Nnamdi Azikiwe University',
-      img: '/images/dr.iyke2.webp'
+      name: "Dr. Ikechukwu Innocent Umeh",
+      about: "Senior Lecturer Nnamdi Azikiwe University",
+      img: "/images/dr.iyke2.webp",
     },
-    speakers: []
+    speakers: [],
   },
 
   {
     id: 2,
-    type: 'past',
-    title: 'The Second Edition - Life-After School Seminar Series',
+    type: "past",
+    title: "The Second Edition - Life-After School Seminar Series",
     summary: `My encounter with many fresh graduates from some Nigerian universities gave me the privilege
 to know and understand a trending adage and phenomenon amongst them, which is the
 “Education is a scam” mentality. The motivation to curb this trend bore my initiative to begin a
@@ -47,22 +47,22 @@ occasion which had over 200 participants in attendance. The second edition was a
 and some of the participants are already sharing their testimonies.</p>
 </div>`,
 
-    image: '/images/gallery/event2.webp',
-    date: '4th December, 2022',
-    time: '10:00 am prompt',
-    venue: 'Chisco Hall Nnamdi Azikiwe University Awka',
+    image: "/images/gallery/event2.webp",
+    date: "4th December, 2022",
+    time: "10:00 am prompt",
+    venue: "Chisco Hall Nnamdi Azikiwe University Awka",
     host: {
-      name: 'Dr. Ikechukwu Innocent Umeh',
-      about: 'Senior Lecturer Nnamdi Azikiwe University',
-      img: '/images/dr.iyke2.webp'
+      name: "Dr. Ikechukwu Innocent Umeh",
+      about: "Senior Lecturer Nnamdi Azikiwe University",
+      img: "/images/dr.iyke2.webp",
     },
-    speakers: []
+    speakers: [],
   },
 
   {
     id: 3,
-    type: 'upcoming',
-    title: 'DIUSCADI: The Third Edition - Life-After School Seminar Series',
+    type: "upcoming",
+    title: "DIUSCADI: The Third Edition - Life-After School Seminar Series",
     summary: `My encounter with many fresh graduates from some Nigerian universities gave me the privilege
 to know and understand a trending adage and phenomenon amongst them, which is the
 “Education is a scam” mentality. The motivation to curb this trend bore my initiative to begin a
@@ -121,37 +121,37 @@ For sponsorship and advert, call/whatsapp - 08035906416 or 08149121542. <br><br>
 
 
 `,
-    image: '/images/logo.jpg',
-    date: '20th April, 2023',
-    time: '10:00 am prompt',
-    venue: 'Main Hall, ASUU NAU Secretariat, Nnamdi Azikiwe University, Awka',
+    image: "/images/logo.jpg",
+    date: "20th April, 2023",
+    time: "10:00 am prompt",
+    venue: "Main Hall, ASUU NAU Secretariat, Nnamdi Azikiwe University, Awka",
     host: {
-      name: 'Dr. Ikechukwu Innocent Umeh',
-      about: 'Senior Lecturer Nnamdi Azikiwe University',
-      img: '/images/dr.iyke2.webp'
+      name: "Dr. Ikechukwu Innocent Umeh",
+      about: "Senior Lecturer Nnamdi Azikiwe University",
+      img: "/images/dr.iyke2.webp",
     },
     speakers: [
       {
-        name: 'HY. Patrick Agba Mba',
-        about: 'Hon Commissioner - Youth Emmpowerment, Anambra State',
-        img: '/images/speakers/speaker1.webp'
+        name: "HY. Patrick Agba Mba",
+        about: "Hon Commissioner - Youth Emmpowerment, Anambra State",
+        img: "/images/speakers/speaker1.webp",
       },
       {
-        name: 'Dr Gbenga Shodare',
+        name: "Dr Gbenga Shodare",
         about:
-          'Center for social Protection and Policy Studies, Sheffield University, UK',
-        img: '/images/speakers/speaker2.webp'
+          "Center for social Protection and Policy Studies, Sheffield University, UK",
+        img: "/images/speakers/speaker2.webp",
       },
       {
-        name: 'Mr Chukwuemeka Fred Agbata (CFA)',
-        about: 'MD/CEO Anambra State ICT Agency',
-        img: '/images/speakers/speaker3.webp'
+        name: "Mr Chukwuemeka Fred Agbata (CFA)",
+        about: "MD/CEO Anambra State ICT Agency",
+        img: "/images/speakers/speaker3.webp",
       },
       {
-        name: 'Barr. Ruth Soronnadi',
-        about: 'Associate Head - Legal and Research HJIUF',
-        img: '/images/speakers/default.png'
-      }
-    ]
-  }
-]
+        name: "Barr. Ruth Soronnadi",
+        about: "Associate Head - Legal and Research HJIUF",
+        img: "/images/speakers/ruth_nnadi.png",
+      },
+    ],
+  },
+];
